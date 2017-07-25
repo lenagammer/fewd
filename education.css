@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+
+
+
+/* colors:#659FA6, #A4BFB0, #F2D6BD,#543226, #D98F64
+font-family: 'Merriweather', serif;
+font-family: 'Open Sans', sans-serif;
+Photo by Sketch the Sun on Unsplash
+*/
+
+body{
+  background-color:#F2D6BD;
+  color: black;
+  font-family: open sans, sans-serif;
+  position: static;
+  text-align: center;
+  line-height: 150%;
+  margin: 0;
+
+
+}
+
+nav{
+  padding:30px;
+  width:100%;
+  position: fixed;
+  top: 0;
+  background-color: #A4BFB0;
+  text-align: center;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 50px;
+  top: 12px;
+
+}
+
+header{
+  height: 250px;
+  background-color:white;
+}
+
+
+
+
+
+
+footer{
+  background-color: #A4BFB0;
+  height: 100px;
+  bottom: 0;
+  padding: 40px;
+
+
+}
+
+footer p{
+  color: white;
+  display: inline;
+  padding: 20px;
+  font-size: 20px;
+
+}
+
+footer a{
+  color:white;
+  font-size: 20px;
+  text-align:right;
+}
+
+
+
+
+
+
+
+#education{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.col-1-2{
+  flex-basis: 48%;
+}
