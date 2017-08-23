@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+
+
+
+/* colors:#659FA6, #A4BFB0, #F2D6BD,#543226, #D98F64
+font-family: 'Merriweather', serif;
+font-family: 'Open Sans', sans-serif;
+Photo by Sketch the Sun on Unsplash
+*/
+
+body{
+background: -webkit-linear-gradient(left, #636FA4, #E8CBC0);
+background: -o-linear-gradient(left, #636FA4, #E8CBC0);
+background: linear-gradient(to right, #636FA4, #E8CBC0);
+  color: black;
+  font-family: 'Lora', serif;
+  position: static;
+  text-align: center;
+  line-height: 150%;
+  margin: 0;
+
+
+}
+
+nav{
+  padding:30px;
+  width:100%;
+  position: fixed;
+  top: 0;
+  background-color: #0E0B1B;
+  text-align: center;
+  z-index:100;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family:'RobotoSlab', serif;
+  padding: 50px;
+  top: 12px;
+
+}
+
+header{
+  height: 250px;
+  background-color:white;
+}
+
+
+
+h1{
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  display: inline-block;
+  margin:30px;
+  padding: 20px;
+  font-size: 60px;
+
+
+}
+
+h2{
+  font-family: 'Montserrat', serif;
+  font-weight: 600;
+  font-size: 40px;
+  padding: 20px;
+  margin:30px;
+  display: inline-block;
+
+}
+
+h3{
+  font-family: 'Montserrat', serif;
+  font-weight: 600;
+  font-size: 32px;
+  padding: 20px;
+  margin:30px;
+  display: inline-block;
+
+
+
+
+}
+p {
+  line-height:1.5;
+  text-align:left;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+a:hover{
+  color:grey;
+}
+
+
+ul{
+  list-style-type: none;
+  font-size: 20px;
+  text-align: left;
+  line-height:1.5;
+
+}
+
+footer{
+  background-color: #0E0B1B;
+  height: 100px;
+  bottom: 0;
+  padding: 40px;
+  position:fixed;
+  width: 100%;
+
+
+}
+
+footer p{
+  color: white;
+  display: inline;
+  padding: 20px;
+  font-size: 20px;
+  text-align: left;
+  font-family:'RobotoSlab', serif;
+
+}
+
+footer a{
+  color:white;
+  font-size: 20px;
+  text-align:right;
+  font-family:'RobotoSlab', serif;
+}
+
+
+
+#educationetc{
+  height: 1000px;
+}
+#morework{
+  height:80px;
+  background-color:white;
+}
+
+
+#sample{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  height:700px;
+}
+
+.col-1-2{
+  flex-basis: 48%;
+}
+
+
+
+
+.parallax {
+    /* The image used */
+    
+    height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

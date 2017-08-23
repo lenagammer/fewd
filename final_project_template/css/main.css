@@ -1,7 +1,7 @@
 
 /* ==========================================================================
-   Base styles:
-   ========================================================================== */
+Base styles:
+========================================================================== */
 /* Fix to include padding and border in the total width for each element */
 * {
   box-sizing: border-box;
@@ -12,95 +12,140 @@ img {
   max-width: 100%;
 }
 
+/*background: #E8CBC0;  /* fallback for old browsers
+background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6
+background: linear-gradient(to right, #636FA4, #E8CBC0);W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*E88C6D #FF5871  FA7C80 */
 
-
-/* colors:#A6CBD5, #FDF8EF, #D5CEC9,#2F3A32, #EFBDA6
-font-family: 'Merriweather', serif;
+/*font-family: 'Merriweather', serif;
 font-family: 'Open Sans', sans-serif;
 Photo by Sketch the Sun on Unsplash
 */
 
+/*  background-color: #0E0B1B;*/
+
 body{
-  background-color:#D5CEC9;
+  background: linear-gradient(to right, #636FA4, #E8CBC0);
   color: black;
-  font-family: open sans, sans-serif;
+  font-family: 'Lora', serif;
   position: static;
   text-align: center;
+  line-height: 150%;
+  margin: 0;
 
 }
+
+.fade
+{
+  opacity:0.5;
+}
+.fade:hover
+{
+  opacity:1;
+}
+
 
 nav{
   padding:30px;
   width:100%;
   position: fixed;
   top: 0;
-  background-color: #2F333B;
+  background-color: black;
   text-align: center;
+  z-index:100;
+  height:80px;
 }
 
-nav a{
+nav a {
   text-decoration: none;
   color: white;
-  font-size: 20px;
-  padding: 50px;
-  top: 12px;
-
+  text-transform: uppercase;
+  padding:50px;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-  header{
-  height: 600px;
-  margin-top: 30px;
-  background-image: url("../img/sketch-the-sun-167556.jpg");
-  background-size: cover;
-  z-index: 100;
-
+section{
+  margin:0;
 }
 
 
 h1{
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Lora', serif;
   font-weight: 600;
-  font-size: 60px;
+  display: inline-block;
+  margin:30px;
   padding: 20px;
+  font-size: 72px !important;
+  position:fixed;
+
+
 }
 
 h2{
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 48px;
+  letter-spacing:6px;
+  position:fixed;
 }
 
 h3{
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 600;
-  font-size: 32px;
-  margin: 20px 10px;
+  font-size: 36px;
+  margin: 20px;
+  padding: 20px;
+  margin:0;
 
+
+}
+
+h4{
+  font-family: 'Montserrat', serif;
+  font-weight: 600;
+  font-size: 28px;
+  margin: 20px;
+  padding: 20px;
 }
 
 
 a{
   text-decoration: none;
   color: black;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
 }
 
-#work a{
-  font-size:30px;
-  font-weight:600;
-
+a:hover{
+  color:#FF9D89;
 }
+
+
 
 p{
   margin-left: 100px;
   margin-right: 100px;
   font-size: 20px;
 
+
+}
+
+ul{
+  list-style-type: none;
+  font-size: 22px;
+  text-align: left;
+
 }
 
 footer{
-  background-color: #2F333B;
+  background-color: black;
   height: 100px;
   bottom: 0;
+  padding: 40px;
+  width: 100%;
+  display: none;
+
 
 
 }
@@ -108,63 +153,490 @@ footer{
 footer p{
   color: white;
   display: inline;
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+
+
+
 }
 
 footer a{
   color:white;
+  font-size: 20px;
+  padding: 20px;
+  text-align:right;
+  font-family: 'Open Sans', sans-serif;
 }
-div .headeretc{
+
+
+.hamburger-icon {
+  margin: 3px auto;
+  width: 2.5px;
+  display: none;
   position: relative;
+  height: 30px;
 }
 
-#work{
-  height: 100px;
-  margin-top: 20px;
+.hamburger-icon:hover,
+.hamburger-icon:active,
+.hamburger-icon:focus {
+  outline: 0;
+}
 
+
+.line:nth-child(1) {
+  top: 0;
 
 }
 
+.line:nth-child(2) {
+  top: 12px;
+}
+
+.line:nth-child(3) {
+  top: 24px;
+}
+
+.line {
+  width: 2.5rem;
+  height: .3125rem;
+  background: #E7E6DD;
+  border-radius: 2.5rem;
+  position: absolute;
+  opacity: 1;
+  animation-duration: all .5s ease-in-out;
+}
+
+
+
+.active .line:nth-child(1){
+    transform:translateY(12px) rotate(135deg);
+    transition: all 3s ease-in-out;
+
+}
+
+
+.active .line:nth-child(2){
+    opacity: 0;
+    transform:translateX(-16px);
+transition: all 2s ease-in-out;
+
+}
+
+
+.active .line:nth-child(3) {
+  transform:translateY(-12px) rotate(-135deg);
+  transition: all 4s ease-in-out;
+}
+
+
+#superburger{
+  position:fixed;
+  left:0;
+  top: 0;
+  background-color: black;
+  height: 400px;
+  width: 250px;
+  z-index: 100;
+  display:none;
+}
+
+#superburger a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding:50px;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  display:block;
+}
+
+#superburger a:hover{
+  color:#FF9D89;
+}
 
 .headeretc{
+  position: relative;
+  height: 800px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  background-size: cover;
+  overflow: visible;
+  top:50px;
+  background-image: url('../img/felipe-santana-325059.jpg');
+  color: white;
+
+}
+
+
+.headeretc h1{
   position: absolute;
-  top: 200px;
+  top: 150px;
+  left:350px;
+  text-align:center;
+
+}
+
+.headeretc h2{
+  position: absolute;
+  top: 300px;
+  left:400px;
+  text-align:center;
 
 }
 
 .about{
-  background-color: #FDF8EF;
+  background-color: white;
   height: 300px;
   margin-top: 20px;
+  width:70%;
+  overflow: hidden;
+  display: none;
+  z-index:100;
+  line-height:175%;
 }
+
+
+
+
+#work{
+  height: 100px;
+  margin-top: 50px;
+  padding-top: 25px;
+  background-color: black;
+
+
+  /* #424659;*/
+
+}
+
+
+#work h3{
+  color:white;
+  font-weight:400;
+  font-family: 'Montserrat', serif;
+
+
+
+}
+
 
 
 
 .pages{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
-  height: 400px;
-  border: solid gray 2px;
-  font-style: Lora;
+  background-color: white;
+  height: 500px;
+  padding: 20px;
+
+
+}
+.pages a{
+  font-style: 'Lora', serif;
   Font-size: 24px;
   font-weight: 600;
+  letter-spacing: 2px;
+  text-transform:none;
+  display: inline-block;
+  margin:20px;
 
 }
 
+.pages a:hover{
+  color:#FF9D89;
+}
 
 
- .col-1-2{
+.col-1-2{
   flex-basis: 48%;
+}
+
+
+.col-1-2 img{
+  padding: 20px;
+}
+
+
+#read{
+  height: 1100px;
+  position:relative;
+
+}
+
+#read-header{
+  background-color:black;
+  color:white;
+  height:100px;
+  position:absolute;
+  top:0;
+  width:100%;
 
 }
 
 
+
+
+.writing{
+  display:none;
+  line-height: 200%;
+
+}
+
+#w1{
+
+}
+
+#w2{
+
+}
+
+#w3{
+
+}
+
+
+
+#w4{
+  line-height: 135%;
+
+}
+
+
+#play{
+  height: 700px;
+  background-color: black;
+  color: white;
+  border-bottom: solid black 1px;
+
+
+}
+
+
+
+#playheader{
+  height:100px;
+}
+
+#playheader h2{
+  padding:40px;
+}
+
+
+#pastwork{
+  background: #522436;
+  height: 300px;
+  color:white;
+  line-height: 200%;
+  display:none;
+}
+
+
+#pastwork h3{
+  padding:50px;
+}
+
+#current{
+  height:300px;
+  background: white;
+  color: black;
+  display:none;
+}
+
+#current h3{
+  padding:50px;
+
+}
 
 
 
 .links{
-  margin-top: 50px;
-  height: 250px;
+  /*  margin-top: 50px; */
+  height: 300px;
+  position:relative;
+  z-index: 70;
 }
 
-.col-1-2 {
+
+.linksactive{
+  background-image: url('../img/felipe-santana-325059.jpg');
+  height: 300px;
+  padding-top:50px;
+
+}
+
+#button{
+  position:absolute;
+  width:150px;
+  height:50px;
+  left:200px;
+  top:50px;
+  background-color: black;
+  border-radius:2px;
+  padding: 10px;
+
+
+}
+
+#button h3{
+  text-transform:uppercase;
+  padding:5px;
+  color:white;
+  font-weight: 600;
+  font-family: 'Lora', serif;
+  letter-spacing: 4px;
+}
+
+#button:active{
+  color: gray;
+
+}
+
+
+#slideout{
+  position:absolute;
+  bottom: 0;
+  left:400px;
+  width: 400px;
+  height: 250px;
+  display:none;
+  border-radius:2px;
+
+
+
+}
+
+
+#slideout a{
+  font-family: 'Lora', serif;
+  text-transform: lowercase;
+  color: white;
+  opacity:1;
+  font-size: 30px;
+  line-height: 200%;
+  word-spacing: 30px;
+  text-align:left;
+
+
+}
+
+#slideout a:hover{
+  color:#FF9D89;
+
+
+}
+
+
+#modal-border{
+  height:600px;
+  width:1500px;
+  background-color: rgba(0, 0, 0, .3);
+  padding: 40px;
+  position:relative;
+  display:none;
+  z-index:80;
+
+
+
+}
+
+
+#modal{
+  padding: 40px 20px;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  position:absolute;
+  left: 300px;
+  bottom:150px;
+  z-index:90;
+
+}
+
+#form{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color:grey;
+
+}
+
+#form input {
+  text-transform: uppercase;
+  border: solid black 2px;
+  padding: 10px;
+  margin: 10px;
+  line-height: 175%;
+  width: 75%;
+  outline: none;
+
+}
+
+#form input:focus{
+	border: solid silver 2px;
+}
+
+
+#form textarea{
+  height: 150px;
+  width: 75%;
+  text-transform: uppercase;
+  border: solid black 2px;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+}
+
+#submitbutton{
+  background-color:black;
+  color:white;
+}
+
+#submitbutton:hover{
+  background-color: #522436;
+}
+
+
+#footertext{
+  display:inline-block;
+}
+
+
+#email h4{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 50px;
+  top: 12px;
+
+}
+
+#refs{
+  text-align:right;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .hamburger-icon {
+        display:block;
+        left:-150px;
+    }
+
+    nav a {
+      display:none;
+    }
+
+    body{
+      text-align: center;
+    }
+    .pages{
+      display:flex;
+      flex-direction:column;
+      justify: space-around;
+    }
+}
